@@ -18,23 +18,28 @@ Player Statistics: Access statistics and records of various athletes.
 
 
 General Information
-•	"Tell me about the history of the Olympic Games."
-•	"What is the origin of soccer?"
+- "Tell me about the history of the Olympic Games."
+- "What is the origin of soccer?"
+
 Sports Trivia and Facts
-•	"Who won the first Super Bowl?"
-•	"What is the highest score in a single NBA game?"
+- "Who won the first Super Bowl?"
+- "What is the highest score in a single NBA game?"
+
 Training Tips and Advice
-•	"What are some effective exercises for improving stamina?"
-•	"How can I increase my sprint speed?"
+- "What are some effective exercises for improving stamina?"
+- "How can I increase my sprint speed?"
+
 Event Information
-•	"When is the next World Cup match?"
-•	"Which teams are participating in the 2024 Olympics?"
+- "When is the next World Cup match?"
+- "Which teams are participating in the 2024 Olympics?"
+
 Player Statistics
-•	"How many goals has Lionel Messi scored this season?"
-•	"What are LeBron James's career statistics?"
+- "How many goals has Lionel Messi scored this season?"
+- "What are LeBron James's career statistics?"
+
 External Links for Real-Time Updates
-•	"Where can I find the latest NBA scores?"
-•	"Can you provide a link to the current Premier League standings?"
+- "Where can I find the latest NBA scores?"
+- "Can you provide a link to the current Premier League standings?"
 
 
 
@@ -68,8 +73,8 @@ Install the necessary dependencies:
 pip install -r requirements.txt
 
 
-#### Configure API Key
-Replace 'your-openai-api-key' in the script with your actual OpenAI API key:
+## Configure API Key
+Replace 'your-api-key' in the script with your actual OpenAI API key:
 
 openai.api_key = 'your-openai-api-key'
 
