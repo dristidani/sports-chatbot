@@ -3,7 +3,7 @@ import openai
 import os.path
 
 # Loading your API key  directly in the script
-openai.api_key = 'sk-proj-bYI0ahpYIdRflMNzoCaZT3BlbkFJ8azxAhb1kZXEOGWldNYl'  
+openai.api_key = 'your-api-key'  
 os.environ["OPENAI_API_KEY"] = openai.api_key
 
 # Define the name for the app
