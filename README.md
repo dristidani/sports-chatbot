@@ -11,16 +11,19 @@ Player Statistics: Access statistics and records of various athletes.
 
 ## Setup Instructions
 ### Prerequisites
-Python 3.7 or higher
-Git
-Clone the Repository
-Clone the repository to your local machine:
+- Python 3.7 or higher
+- Git
+- Clone the Repository
+- Clone the repository to your local machine:
 
-bash
+#### bash
 Copy code
-git clone https://github.com/your_username/sports-chatbot.git
+
+git clone https://github.com/dristidani/sports-chatbot.git
+
 cd sports-chatbot
-Set Up the Virtual Environment
+
+#### Set Up the Virtual Environment
 Create and activate a virtual environment:
 
 bash
