@@ -56,34 +56,40 @@ External Links for Real-Time Updates
 
 
 git clone https://github.com/dristidani/sports-chatbot.git
-
+```sh
 cd sports-chatbot
+```
 
 #### Set Up the Virtual Environment
 Create and activate a virtual environment:
+```sh
 python -m venv myenv
+```
 #### For Windows
+```sh
 myenv\Scripts\activate
+```
 #### For macOS/Linux
+```sh
 source myenv/bin/activate
+```
 
 ### Install Dependencies
 Install the necessary dependencies:
-
+```sh
 pip install -r requirements.txt
-
+```
 
 ## Configure API Key
 Replace 'your-api-key' in the script with your actual OpenAI API key:
 
 openai.api_key = 'your-openai-api-key'
 
-
 #### Run the Application
 Start the Streamlit application:
-
+```sh
 streamlit run app.py
-
+```
 
 #### Demo Video
 YouTube Video Demonstration
