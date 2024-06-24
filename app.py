@@ -3,7 +3,7 @@ import openai
 import os.path
 
 # Loading your API key  directly in the script
-openai.api_key = 'your-api-key'  
+openai.api_key = 'OPEN-API-KEY'  
 os.environ["OPENAI_API_KEY"] = openai.api_key
 
 # Define the name for the app
@@ -11,29 +11,51 @@ st.title("🏏⚽ Sports Chatbot 🏀🎾")
 st.write("Ask me anything about sports!")
 
 # Prompting Patterns
-persona = "You are a friendly sports expert."
-chain_of_thought = "Think through the problem step-by-step before providing the answer."
+persona = "You are a knowledgeable and friendly sports analyst with expertise in all major sports."
+chain_of_thought = "Explain your answer step-by-step, considering historical context, player statistics, and game rules."
+examples = [
+    {"role": "user", "content": "Who won the first Superbowl?"},
+    {"role": "assistant", "content": "The Green Bay Packers won the first Superbowl in 1967."},
+    {"role": "user", "content": "Explain the offside rule in soccer."},
+    {"role": "assistant", "content": "The offside rule in soccer states that a player is offside if they are closer to the opponent's goal line than both the ball and the second last opponent when the ball is passed to them."}
+]
 
-# Initialize chat history in session state
-if 'history' not in st.session_state:
-    st.session_state.history = []
-
-def get_gpt3_response(messages):
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=messages,
-        max_tokens=150,
-        temperature=0.7
-    )
-    return response.choices[0].message['content'].strip()
-
-# Function to format messages for conversation
 def format_messages(history, user_message):
-    messages = [{"role": "system", "content": persona}]
+    messages = [{"role": "system", "content": f"{persona} {chain_of_thought}"}] + examples
     for message in history:
         messages.append({"role": message["role"], "content": message["content"]})
     messages.append({"role": "user", "content": user_message})
     return messages
+
+def get_gpt3_response(messages):
+    complete_response = ""
+    max_response_length = 500  # Define an upper limit for the total response length
+    total_tokens_used = 0
+
+    while total_tokens_used < max_response_length:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=messages,
+            max_tokens=200,  # Moderate token limit
+            temperature=0.7
+        )
+        response_text = response.choices[0].message['content'].strip()
+        complete_response += response_text
+        total_tokens_used += len(response_text.split())
+
+        # Break if the response seems complete or reaches the token limit
+        if len(response_text) < 200 or not response_text.endswith(('...', 'more')):
+            break
+
+        # Append the current response to the message history and continue
+        messages.append({"role": "assistant", "content": response_text})
+        messages.append({"role": "user", "content": "Continue."})
+
+    return complete_response
+
+# Initialize chat history in session state
+if 'history' not in st.session_state:
+    st.session_state.history = []
 
 # Display conversation history
 st.write("### Conversation History")
