@@ -37,7 +37,7 @@ Player Statistics
 - "How many goals has Lionel Messi scored this season?"
 - "What are LeBron James's career statistics?"
 
-External Links for Real-Time Updates
+External Links for Updates
 - "Where can I find the latest NBA scores?"
 - "Can you provide a link to the current Premier League standings?"
 
