@@ -92,8 +92,7 @@ streamlit run app.py
 ```
 
 #### Demo Video
-[Video Demonstration]
-[https://northeastern-my.sharepoint.com/:v:/g/personal/dani_d_northeastern_edu/EQ1TxoSwN11LhXicWi597qwBT99hDmj7pZDDt8FY0-xIlw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=bjvesx](url)
+[Video Demonstration](https://northeastern-my.sharepoint.com/:v:/g/personal/dani_d_northeastern_edu/EQ1TxoSwN11LhXicWi597qwBT99hDmj7pZDDt8FY0-xIlw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=bjvesx)
 
 ## Author
 Dristi Dani
